@@ -9,7 +9,11 @@ import com.kodilla.stream.iterate.NumbersGenerator;
 import com.kodilla.stream.lambda.*;
 import com.kodilla.stream.person.People;
 import com.kodilla.stream.reference.FunctionalCalculator;
+import com.kodilla.stream.world.Continent;
+import com.kodilla.stream.world.Country;
+import com.kodilla.stream.world.World;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.List;
@@ -68,6 +72,31 @@ public class StreamMain {
         theResultMapOfForumUser.entrySet().stream()
                 .map(entry -> entry.getKey() + ": " + entry.getValue())
                 .forEach(System.out::println);
+
+
+        System.out.println("\nModul 07.4" );
+
+        Continent europe = new Continent();
+
+        europe.addCountry(new Country("Poland", new BigDecimal("123")));
+            europe.addCountry(new Country("Germany", new BigDecimal("456")));
+            europe.addCountry(new Country("France", new BigDecimal("789")));
+
+        Continent asia = new Continent();
+            asia.addCountry(new Country("Russia", new BigDecimal("987")));
+            asia.addCountry(new Country("China", new BigDecimal("654")));
+            asia.addCountry(new Country("India", new BigDecimal("321")));
+
+        Continent africa = new Continent();
+            africa.addCountry(new Country("Niger", new BigDecimal("147")));
+            africa.addCountry(new Country("Tunisia", new BigDecimal("258")));
+            africa.addCountry(new Country("Kenya", new BigDecimal("369")));
+
+        World world = new World();
+            world.addContinent(europe);
+            world.addContinent(asia);
+            world.addContinent(africa);
+
     }
 }
 
