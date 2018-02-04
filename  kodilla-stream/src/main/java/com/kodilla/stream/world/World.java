@@ -18,11 +18,11 @@ public class World {
         return theContinentList;
     }
 
-    public Set<BigDecimal> getPeopleQuantity() {
+    public BigDecimal getPeopleQuantity() {
         return theContinentList.stream()
             .flatMap(continent -> continent.getTheCountryList().stream())
             .map(Country::getPeopleQuantity)
-            .collect(Collectors.toSet());
+            .reduce(BigDecimal.ZERO, (sum, delta) -> sum.add(delta));
 
     }
 }

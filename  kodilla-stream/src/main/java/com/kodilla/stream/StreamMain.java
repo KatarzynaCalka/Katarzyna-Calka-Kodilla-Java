@@ -74,28 +74,9 @@ public class StreamMain {
                 .forEach(System.out::println);
 
 
-        System.out.println("\nModul 07.4" );
 
-        Continent europe = new Continent();
 
-        europe.addCountry(new Country("Poland", new BigDecimal("123")));
-            europe.addCountry(new Country("Germany", new BigDecimal("456")));
-            europe.addCountry(new Country("France", new BigDecimal("789")));
 
-        Continent asia = new Continent();
-            asia.addCountry(new Country("Russia", new BigDecimal("987")));
-            asia.addCountry(new Country("China", new BigDecimal("654")));
-            asia.addCountry(new Country("India", new BigDecimal("321")));
-
-        Continent africa = new Continent();
-            africa.addCountry(new Country("Niger", new BigDecimal("147")));
-            africa.addCountry(new Country("Tunisia", new BigDecimal("258")));
-            africa.addCountry(new Country("Kenya", new BigDecimal("369")));
-
-        World world = new World();
-            world.addContinent(europe);
-            world.addContinent(asia);
-            world.addContinent(africa);
 
     }
 }
