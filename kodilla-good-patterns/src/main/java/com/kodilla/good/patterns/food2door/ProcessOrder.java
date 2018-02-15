@@ -1,6 +1,6 @@
-package com.kodilla.good.partners.food2door;
+package com.kodilla.good.patterns.food2door;
 
-public class ProcessOrder extends Process {
+public class ProcessOrder extends com.kodilla.good.patterns.food2door.Process {
 
     public void processExtraFoodShop (Request request) {
         System.out.println(super.process() + "\nPlease make your payment before delivery.");
