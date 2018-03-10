@@ -2,6 +2,7 @@ package com.kodilla.spring.library;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -12,12 +13,18 @@ import java.util.Arrays;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class LibraryTestSuite {
+
+    @Autowired
+    private Library library;
+    @Autowired
+    private Test test;
+
     @Test
     public void testLoadFromDb() {
-        //Given
-        ApplicationContext context =
-                new AnnotationConfigApplicationContext("com.kodilla.spring");
-        Library library = context.getBean(Library.class);
+//        //Given
+//        ApplicationContext context =
+//                new AnnotationConfigApplicationContext("com.kodilla.spring");
+//        Library library = context.getBean(Library.class);
         //When
         library.loadFromDb();
         //Then

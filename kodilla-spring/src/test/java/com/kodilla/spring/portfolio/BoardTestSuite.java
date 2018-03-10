@@ -2,6 +2,7 @@ package com.kodilla.spring.portfolio;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -12,11 +13,12 @@ import org.junit.Assert;
 @SpringBootTest
 public class BoardTestSuite {
 
+    @Autowired
+    private Board board;
+
     @Test
     public void testTaskAdd(){
         //Given
-        ApplicationContext context = new AnnotationConfigApplicationContext(BoardConfig.class);
-        Board board = context.getBean(Board.class);
         //When
         board.getToDoList().addTheTask("Add task to do");
         board.getInProgressList().addTheTask("Add task in progress");
