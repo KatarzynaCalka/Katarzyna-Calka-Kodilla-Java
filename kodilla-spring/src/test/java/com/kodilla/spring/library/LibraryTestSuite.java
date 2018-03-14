@@ -14,17 +14,12 @@ import java.util.Arrays;
 @SpringBootTest
 public class LibraryTestSuite {
 
-    @Autowired
-    private Library library;
-    @Autowired
-    private Test test;
-
     @Test
     public void testLoadFromDb() {
-//        //Given
-//        ApplicationContext context =
-//                new AnnotationConfigApplicationContext("com.kodilla.spring");
-//        Library library = context.getBean(Library.class);
+        //Given
+        ApplicationContext context =
+                new AnnotationConfigApplicationContext("com.kodilla.spring");
+        Library library = context.getBean(Library.class);
         //When
         library.loadFromDb();
         //Then
